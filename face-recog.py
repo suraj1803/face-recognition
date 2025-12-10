@@ -63,7 +63,7 @@ def capture_faces():
 
     cap = cv2.VideoCapture(0)
     count = 0
-    target = 60
+    target = 200
 
     print("Capturing NORMAL… press q to stop")
 
@@ -107,7 +107,7 @@ def capture_faces():
 
     cap = cv2.VideoCapture(0)
     count2 = 0
-    target2 = 60
+    target2 = 200
 
     print("Capturing MASKED… press q to stop")
 
@@ -211,7 +211,7 @@ def recognize():
             id,conf = rec.predict(gray)
             label = labels.get(id,"Unknown")
 
-            if conf > 80:
+            if conf > 50:
                 display="Unknown"
             else:
                 if "-" in label:
